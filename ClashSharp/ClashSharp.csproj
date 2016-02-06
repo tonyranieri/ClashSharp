@@ -48,6 +48,7 @@
     <Compile Include="Data\ClanSearchCriteria.cs" />
     <Compile Include="Data\League.cs" />
     <Compile Include="Data\Location.cs" />
+    <Compile Include="Service\ClanService.cs" />
     <Compile Include="Service\HttpService.cs" />
     <Compile Include="Interface\IClanService.cs" />
     <Compile Include="Interface\IHttpService.cs" />

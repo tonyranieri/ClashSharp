@@ -1,12 +1,13 @@
 ﻿using ClashSharp.Data;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ClashSharp.Interface
 {
     public interface IClanService
     {
         IEnumerable<ClanInformation> SearchClans(ClanSearchCriteria criteria);
-        ClanInformation GetClanInformation(string clanTag);
+        Task<ClanInformation> GetClanInformation(string clanTag);
         IEnumerable<ClanMember> ListClanMembers(string clanTag);
     }
 }

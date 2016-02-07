@@ -15,8 +15,8 @@ namespace ClashSharp.Data
         public int WarWins { get; set; }
         public int ClanPoints { get; set; }
         public int RequiredTrophies { get; set; }
-        public int MemberCount { get; set; }
-        public IEnumerable<ClanMember> Members { get; set; }
+        public int Members { get; set; }
+        public IEnumerable<ClanMember> MemberList { get; set; }
         public int Rank { get; set; }
         public int PreviousRank { get; set; }
     }

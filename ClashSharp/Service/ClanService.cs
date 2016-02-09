@@ -29,10 +29,6 @@ namespace ClashSharp.Service
             {
                 Console.WriteLine(ex);
             }
-            finally
-            {
-                // informational logging ?
-            }
 
             return clanInfo;
         }

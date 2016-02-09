@@ -3,7 +3,6 @@ using ClashSharp.Data;
 using ClashSharp.Interface;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ClashSharp.Service
@@ -54,8 +53,13 @@ namespace ClashSharp.Service
             return returnValue;
         }
 
-        public IEnumerable<ClanInformation> SearchClans(ClanSearchCriteria criteria)
+        public async Task<SearchClanResult> SearchClans(ClanSearchCriteria criteria)
         {
+            // validate the search criteria
+            // name must be at least 3 chars long
+
+            //https://api.clashofclans.com/v1/clans?name=gondor&warFrequency=moreThanOncePerWeek"
+
             throw new NotImplementedException();
         }
     }

@@ -6,5 +6,6 @@
 
         public const string GetClanInformationUrlTemplate = @"https://api.clashofclans.com/v1/clans/{0}";
         public const string ListClanMembersUrlTemplate = @"https://api.clashofclans.com/v1/clans/{0}/members";
+        public const string SearchClansUrlTemplate = @"https://api.clashofclans.com/v1/clans{0}";
     }
 }

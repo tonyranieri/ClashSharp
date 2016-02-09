@@ -55,7 +55,9 @@
     <Compile Include="Data\ListClanMembersResponse.cs" />
     <Compile Include="Data\Location.cs" />
     <Compile Include="Data\SearchClanResult.cs" />
+    <Compile Include="Interface\IClanSearchCriteriaService.cs" />
     <Compile Include="Interface\IClanTagService.cs" />
+    <Compile Include="Service\ClanSearchCriteriaService.cs" />
     <Compile Include="Service\ClanService.cs" />
     <Compile Include="Service\ClanTagService.cs" />
     <Compile Include="Service\HttpService.cs" />

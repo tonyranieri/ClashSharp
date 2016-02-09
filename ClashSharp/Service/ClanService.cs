@@ -55,12 +55,25 @@ namespace ClashSharp.Service
 
         public async Task<SearchClanResult> SearchClans(ClanSearchCriteria criteria)
         {
-            // validate the search criteria
-            // name must be at least 3 chars long
+            IClanSearchCriteriaService criteriaSvc = new ClanSearchCriteriaService();
 
-            //https://api.clashofclans.com/v1/clans?name=gondor&warFrequency=moreThanOncePerWeek"
+            var queryString = criteriaSvc.BuildQueryStringFromCriteria(criteria);
+            var url = string.Format(UrlConstants.SearchClansUrlTemplate, queryString);
 
-            throw new NotImplementedException();
+            string jsonData = string.Empty;
+            var returnValue = new SearchClanResult();
+
+            try
+            {
+                jsonData = await _httpSvc.GetJsonAsync(_cocApiToken, url);
+                returnValue = JsonConvert.DeserializeObject<SearchClanResult>(jsonData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return returnValue;
         }
     }
 }

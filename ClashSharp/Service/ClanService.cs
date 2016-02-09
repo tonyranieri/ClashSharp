@@ -33,9 +33,25 @@ namespace ClashSharp.Service
             return clanInfo;
         }
 
-        public IEnumerable<ClanMember> ListClanMembers(string clanTag)
+        public async Task<ListClanMembersResponse> ListClanMembers(string clanTag)
         {
-            throw new NotImplementedException();
+            var encodedClanTag = _clanTagSvc.EncodeClanTag(clanTag);
+            var url = string.Format(UrlConstants.ListClanMembersUrlTemplate, encodedClanTag);
+
+            string jsonData = string.Empty;
+            var returnValue = new ListClanMembersResponse();
+
+            try
+            {
+                jsonData = await _httpSvc.GetJsonAsync(_cocApiToken, url);
+                returnValue = JsonConvert.DeserializeObject<ListClanMembersResponse>(jsonData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return returnValue;
         }
 
         public IEnumerable<ClanInformation> SearchClans(ClanSearchCriteria criteria)

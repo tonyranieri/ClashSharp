@@ -8,6 +8,6 @@ namespace ClashSharp.Interface
     {
         IEnumerable<ClanInformation> SearchClans(ClanSearchCriteria criteria);
         Task<ClanInformation> GetClanInformation(string clanTag);
-        IEnumerable<ClanMember> ListClanMembers(string clanTag);
+        Task<ListClanMembersResponse> ListClanMembers(string clanTag);
     }
 }

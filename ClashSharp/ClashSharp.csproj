@@ -52,6 +52,7 @@
     <Compile Include="Data\ClanRankInfo.cs" />
     <Compile Include="Data\ClanSearchCriteria.cs" />
     <Compile Include="Data\League.cs" />
+    <Compile Include="Data\ListClanMembersResponse.cs" />
     <Compile Include="Data\Location.cs" />
     <Compile Include="Interface\IClanTagService.cs" />
     <Compile Include="Service\ClanService.cs" />

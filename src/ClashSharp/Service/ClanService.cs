@@ -1,8 +1,6 @@
 ﻿using ClashSharp.Constants;
 using ClashSharp.Data;
 using ClashSharp.Interface;
-using Newtonsoft.Json;
-using System;
 using System.Threading.Tasks;
 
 namespace ClashSharp.Service

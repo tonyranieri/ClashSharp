@@ -1,10 +1,10 @@
-﻿using System.Configuration;
+﻿using ClashSharp.Interface;
+using ClashSharp.Util;
 
 namespace ClashSharp.Service
 {
     public class ServiceBase
     {
-        internal string _cocApiToken = ConfigurationManager.AppSettings["clashAPIKey"];
-        internal HttpService _httpSvc = new HttpService();
+        internal IApiClient _apiClient = new ApiClient();
     }
 }

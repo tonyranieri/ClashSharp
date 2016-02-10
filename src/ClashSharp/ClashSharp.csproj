@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Util\ApiClient.cs" />
     <Compile Include="Constants\UrlConstants.cs" />
     <Compile Include="Data\AssetUrls.cs" />
     <Compile Include="Data\ClanInformation.cs" />
@@ -55,12 +56,13 @@
     <Compile Include="Data\ListClanMembersResponse.cs" />
     <Compile Include="Data\Location.cs" />
     <Compile Include="Data\SearchClanResult.cs" />
+    <Compile Include="Interface\IApiClient.cs" />
     <Compile Include="Interface\IClanSearchCriteriaService.cs" />
     <Compile Include="Interface\IClanTagService.cs" />
     <Compile Include="Service\ClanSearchCriteriaService.cs" />
     <Compile Include="Service\ClanService.cs" />
     <Compile Include="Service\ClanTagService.cs" />
-    <Compile Include="Service\HttpService.cs" />
+    <Compile Include="Util\HttpService.cs" />
     <Compile Include="Interface\IClanService.cs" />
     <Compile Include="Interface\IHttpService.cs" />
     <Compile Include="Interface\ILeagueService.cs" />

@@ -7,7 +7,7 @@ namespace ClashSharp.Interface
     public interface ILocationService
     {
         Task<ListLocationResponse> ListLocations();
-        Location GetLocationInformation(string locationId);
+        Task<Location> GetLocationInformation(int locationId);
         IEnumerable<ClanRankInfo> GetClanRankForLocation(string locationId);
         IEnumerable<ClanMember> GetPlayerRankForLocation(string locationId);
     }

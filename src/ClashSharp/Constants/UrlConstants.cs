@@ -9,5 +9,6 @@
         public const string SearchClansUrlTemplate = @"https://api.clashofclans.com/v1/clans{0}";
 
         public const string ListLocationsUrlTemplate = @"https://api.clashofclans.com/v1/locations";
+        public const string GetLocationInformationUrlTemplate = @"https://api.clashofclans.com/v1/locations/{0}";
     }
 }

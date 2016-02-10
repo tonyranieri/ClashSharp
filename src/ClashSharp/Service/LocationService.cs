@@ -14,9 +14,11 @@ namespace ClashSharp.Service
             throw new NotImplementedException();
         }
 
-        public Location GetLocationInformation(string locationId)
+        public async Task<Location> GetLocationInformation(int locationId)
         {
-            throw new NotImplementedException();
+            var url = string.Format(UrlConstants.GetLocationInformationUrlTemplate, locationId);
+            var result = await _apiClient.Get<Location>(url);
+            return result;
         }
 
         public IEnumerable<ClanMember> GetPlayerRankForLocation(string locationId)

@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ClanRankForLocationResponse.cs" />
+    <Compile Include="Data\ListLeagueResponse.cs" />
     <Compile Include="Data\ListLocationResponse.cs" />
     <Compile Include="Data\PlayerRankForLocationResponse.cs" />
+    <Compile Include="Service\LeagueService.cs" />
     <Compile Include="Service\LocationService.cs" />
     <Compile Include="Util\ApiClient.cs" />
     <Compile Include="Constants\UrlConstants.cs" />

@@ -1,10 +1,10 @@
 ﻿using ClashSharp.Data;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ClashSharp.Interface
 {
     public interface ILeagueService
     {
-        IEnumerable<League> ListLeagues();
+        Task<ListLeagueResponse> ListLeagues();
     }
 }

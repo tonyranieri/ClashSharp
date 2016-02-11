@@ -1,6 +1,6 @@
 #ClashSharp
 
-##A C# library to use the Clash of Clans API
+##A C# client library for the Clash of Clans API
 Register for your own developer account here - https://developer.clashofclans.com/
 Create your token(s) here - https://developer.clashofclans.com/#/account
 

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ClanRankForLocationResponse.cs" />
     <Compile Include="Data\ListLocationResponse.cs" />
     <Compile Include="Service\LocationService.cs" />
     <Compile Include="Util\ApiClient.cs" />

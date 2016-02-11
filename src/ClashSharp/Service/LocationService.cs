@@ -9,10 +9,12 @@ namespace ClashSharp.Service
 {
     public class LocationService : ServiceBase, ILocationService
     {
-        public IEnumerable<ClanRankInfo> GetClanRankForLocation(string locationId)
+        public async Task<ClanRankForLocationResponse> GetClanRankForLocation(int locationId)
         {
-            throw new NotImplementedException();
-        }
+            var url = string.Format(UrlConstants.GetClanRankForLocationUrlTemplate, locationId);
+            var result = await _apiClient.Get<ClanRankForLocationResponse>(url);
+            return result;
+        }   
 
         public async Task<Location> GetLocationInformation(int locationId)
         {
@@ -21,7 +23,7 @@ namespace ClashSharp.Service
             return result;
         }
 
-        public IEnumerable<ClanMember> GetPlayerRankForLocation(string locationId)
+        public IEnumerable<ClanMember> GetPlayerRankForLocation(int locationId)
         {
             throw new NotImplementedException();
         }

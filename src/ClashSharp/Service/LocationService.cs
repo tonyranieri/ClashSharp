@@ -23,9 +23,11 @@ namespace ClashSharp.Service
             return result;
         }
 
-        public IEnumerable<ClanMember> GetPlayerRankForLocation(int locationId)
+        public async Task<PlayerRankForLocationResponse> GetPlayerRankForLocation(int locationId)
         {
-            throw new NotImplementedException();
+            var url = string.Format(UrlConstants.GetPlayerRankForLocationUrlTemplate, locationId);
+            var result = await _apiClient.Get<PlayerRankForLocationResponse>(url);
+            return result;
         }
 
         public async Task<ListLocationResponse> ListLocations()
